@@ -96,4 +96,4 @@ Open Remix IDE, choose New File, Paste Code, Compile the Contract using Solidity
 
 # LICENSE :
 
-   This Project is licensed under the MIT License - see the link (  ) for details.
+   This Project is licensed under the MIT License - see the link ( https://github.com/Sourov2002t/avaxFINAL/blob/main/LICENSE ) for details.
