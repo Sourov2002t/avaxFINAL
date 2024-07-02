@@ -42,7 +42,7 @@ Open Remix IDE, choose New File, Paste Code, Compile the Contract using Solidity
        
 3. Add the Smart Contract Code :
    
-     * Copy the DegenGamingToken code and paste it into avax.sol:- 
+     * Copy the DegenGamingToken code and paste it into avax.sol:- https://github.com/Sourov2002t/avaxFINAL/blob/main/finalavax.sol 
 
 4. Compile the Contract :
 
