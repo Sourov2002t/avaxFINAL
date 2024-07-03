@@ -6,7 +6,11 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract DegenGamingToken is ERC20, Ownable {
     uint8 private customDecimals;
+
+    // Define the mapping to store the prices of in-game items
     mapping(string => uint256) private _itemPrices;
+
+
     event ItemRedeemed(address indexed player, string item);
 
     constructor(uint8 _decimals) ERC20("DegenGamingToken", "DGT") Ownable(msg.sender){
@@ -30,9 +34,9 @@ contract DegenGamingToken is ERC20, Ownable {
      * Redeem (burn) tokens for in-game items.
      * The amount of tokens to redeem.
      */
-    function redeem(string memory item,uint256 amount) external {
+    function redeem(string memory item) external {
         require(balanceOf(msg.sender) >= _itemPrices[item], "Insufficient balance");
-        _burn(msg.sender, amount);
+        _transfer(msg.sender, owner(), _itemPrices[item]);
          emit ItemRedeemed(msg.sender, item);
         // Additional logic for in-game item redemption can be added here
     }
